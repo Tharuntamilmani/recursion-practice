@@ -1,18 +1,16 @@
-// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
-import java.util.Scanner;
-
+import java.util.*;
 public class sumofnatural {
-   public sumofnatural() {
-   }
+    public static int son(int n){
+        if(n==0){
+            return 0;
+        }
+        return n + son(n-1);
 
-   public static int son(int var0) {
-      return var0 == 0 ? 0 : var0 + son(var0 - 1);
-   }
-
-   public static void main(String[] var0) {
-      Scanner var1 = new Scanner(System.in);
-      int var2 = var1.nextInt();
-      System.out.println(son(var2));
-      var1.close();
-   }
+    }
+    public static void main(String[] args){
+        Scanner c = new Scanner(System.in);
+        int n = c.nextInt();
+        System.out.println(son(n)); 
+        c.close();
+    }
 }
